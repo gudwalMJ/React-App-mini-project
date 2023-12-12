@@ -1,11 +1,13 @@
+import "/src/style/footer.css";
+
 function Footer() {
-    return (
-        <div className='Footer'>
-            <a href='https://github.com/Ksfraan/React-App-mini-project'>
-                Visite o repositório no GitHub
-            </a>
-        </div>
-    );
+  return (
+    <div className="footer">
+      <a href="https://github.com/Ksfraan/React-App-mini-project">
+        Visit the repository on Github
+      </a>
+    </div>
+  );
 }
 
 export default Footer;
