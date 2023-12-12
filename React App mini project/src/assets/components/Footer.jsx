@@ -1,11 +1,9 @@
 function Footer() {
     return (
-        <div>
-            <div className='Footer'>
-                <a href='https://github.com/Ksfraan/React-App-mini-project'>
-                    Visit the repository on GitHub
-                </a>
-            </div>
+        <div className='Footer'>
+            <a href='https://github.com/Ksfraan/React-App-mini-project'>
+                Visite o repositório no GitHub
+            </a>
         </div>
     );
 }
