@@ -9,6 +9,7 @@ img {
   height: auto;
   border-radius: 5px;
   margin: 0;
+  padding-left: 45px;
 }
 
 .navBar {
@@ -19,6 +20,7 @@ img {
   align-items: center;
   padding: 10px;
   background-color: #344bf1;
+  z-index: 1;
 }
 
 .navBar h1 {
