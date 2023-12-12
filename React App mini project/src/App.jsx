@@ -1,13 +1,19 @@
-import { useState } from "react";
-import "./App.css";
-import Navbar from "./assets/components/Navbar";
+import { useState } from 'react';
+import './App.css';
+import Navbar from './assets/components/Navbar';
+import Footer from './assets/components/Footer';
 
 function App() {
-  return (
-    <div>
-      <Navbar />
-    </div>
-  );
+    return (
+        <div>
+            <div>
+                <Navbar />
+            </div>
+            <div>
+                <Footer />
+            </div>
+        </div>
+    );
 }
 
 export default App;
