@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Navbar from './assets/components/Navbar';
 import Footer from './assets/components/Footer';
+import Sidebar from './assets/components/Sidebar';
 
 function App() {
     return (
@@ -11,6 +12,9 @@ function App() {
             </div>
             <div>
                 <Footer />
+            </div>
+            <div>
+                <Sidebar />
             </div>
         </div>
     );
