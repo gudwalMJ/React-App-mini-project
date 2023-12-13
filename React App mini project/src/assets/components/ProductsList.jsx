@@ -7,6 +7,13 @@ function ProductList() {
 
     const defaultStockAmount = 60;
 
+    const handleDelete = (productId) => {
+        const updatedProducts = products.filter(
+            (product) => product.id !== productId
+        );
+        setProducts(updatedProducts);
+    };
+
     return (
         <div className='productsList-wrapper'>
             <ul>
@@ -27,6 +34,13 @@ function ProductList() {
                                 {product.price}
                             </p>
                             {/* */}
+                            <div className='Delete-button'>
+                                <button
+                                    onClick={() => handleDelete(product.id)}
+                                >
+                                    Delete
+                                </button>
+                            </div>
                         </div>
                     </li>
                 ))}
