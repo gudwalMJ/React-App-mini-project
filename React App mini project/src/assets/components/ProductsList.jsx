@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import productsData from '../../../products.json';
-import './src/style/productsList.css';
+import '/src/style/productsList.css';
 
 function ProductList() {
     const [products, setProducts] = useState(productsData);
@@ -13,7 +13,7 @@ function ProductList() {
                 {products.map((product) => (
                     <li key={product.id} className='product-item'>
                         {product.stock < defaultStockAmount && (
-                            <span key='low-stock' className='low stock'>
+                            <span key='low-stock' className='low-stock'>
                                 LOW STOCK
                             </span>
                         )}
@@ -26,7 +26,7 @@ function ProductList() {
                                 <span className='bold-text'>Price:</span> $
                                 {product.price}
                             </p>
-                            {/* Add any additional information you want */}
+                            {/* */}
                         </div>
                     </li>
                 ))}

@@ -1,5 +1,9 @@
 body {
-  margin: 0;
-  background-color: white;
-  padding-top: 20px;
+    margin: 0;
+    background-color: white;
+    padding-top: 20px;
+}
+.low-stock {
+    color: red;
+    font-weight: bold;
 }
