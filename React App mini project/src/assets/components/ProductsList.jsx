@@ -7,7 +7,7 @@ function ProductList() {
   console.log(products);
   return (
     <div>
-      <ul>
+      <ul className="product-list">
         {products.map((product) => (
           <li key={product.id} className="product-item">
             <img src={product.thumbnail} alt={product.title} />
