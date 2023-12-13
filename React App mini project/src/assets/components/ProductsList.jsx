@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import productsData from './products.json';
+import { useState } from 'react';
+import productsData from '../../../products.json';
 import './src/style/productsList.css';
 
 function ProductList() {
