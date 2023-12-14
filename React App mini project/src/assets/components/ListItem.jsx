@@ -1,33 +1,40 @@
-import React from "react";
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types'; // ES6
 
 function ListItem({ product, defaultStockAmount, handleDelete }) {
-  return (
-    <li key={product.id} className="product-item">
-      {product.stock < defaultStockAmount && (
-        <span key="low-stock" className="low-stock">
-          LOW STOCK
-        </span>
-      )}
-      <img src={product.thumbnail} alt={product.title} />
+    const productId = product?.id;
+    return (
+        <li key={productId} className='product-item'>
+            <Link to={`/item/${productId}`}>
+                <div className='product-image-wrapper'>
+                    <img src={product.thumbnail} alt={product.title} />
+                </div>
+            </Link>
 
-      <div className="textPart">
-        <h3>{product.title}</h3>
-        <p>{product.description}</p>
-        <p>Stock: {product.stock}</p>
-        <p>
-          <span className="bold-text">Price:</span> ${product.price}
-        </p>
-        <p>Discount: {product.discountPercentage}%</p>
-        <p>Rating: {product.rating}</p>
-        <p>Brand: {product.brand}</p>
-        <p>Category: {product.category}</p>
-        {/* */}
-        <div className="Delete-button">
-          <button onClick={() => handleDelete(product.id)}>Delete</button>
-        </div>
-      </div>
-    </li>
-  );
+            <div className='textPart'>
+                <h3>{product.title}</h3>
+                <p>
+                    <span className='bold-text'>Price:</span> ${product.price}
+                </p>
+                <div className='delete-button'>
+                    <button onClick={() => handleDelete(productId)}>
+                        Delete
+                    </button>
+                    {product.stock < defaultStockAmount && (
+                        <span key='low-stock' className='low-stock'>
+                            LOW STOCK
+                        </span>
+                    )}
+                </div>
+            </div>
+        </li>
+    );
 }
+
+ListItem.propTypes = {
+    product: PropTypes.object,
+    defaultStockAmount: PropTypes.number,
+    handleDelete: PropTypes.func,
+};
 
 export default ListItem;

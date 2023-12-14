@@ -3,18 +3,16 @@ import { Link } from 'react-router-dom';
 
 function Sidebar() {
     return (
-        <div className='sideBar'>
-            <nav>
-                <ul>
-                    <li>
-                        <a href='#'>Home Page</a>
-                    </li>
-                    <li>
-                        <Link to='/about'>About</Link>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <nav className='sideBar'>
+            <ul>
+                <li>
+                    <a href='#'>Home Page</a>
+                </li>
+                <li>
+                    <Link to='/about'>About</Link>
+                </li>
+            </ul>
+        </nav>
     );
 }
 

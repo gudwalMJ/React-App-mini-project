@@ -1,15 +1,15 @@
 .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #16005e;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  z-index: 1;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #16005e;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1;
 }
 
 .footer a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }

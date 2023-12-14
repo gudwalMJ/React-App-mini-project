@@ -1,32 +1,32 @@
 .sideBar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%; /* Adjust the height as needed */
-  width: 200px; /* Adjust the width as needed */
-  background-color: #344bf1;
-  color: white;
-  padding-top: 130px; /* Adjust where the Home Page starts */
-  padding-bottom: 60px;
-  z-index: 0;
-  text-align: center;
+    position: fixed;
+    left: 0;
+    top: 9em;
+    height: 100%; /* Adjust the height as needed */
+    width: 9em; /* Adjust the width as needed */
+    background-color: #344bf1;
+    color: white;
+    padding-top: 130px; /* Adjust where the Home Page starts */
+    padding-bottom: 60px;
+    text-align: center;
+    order: 0;
 }
 
 nav {
-  padding: 20px;
+    padding: 20px;
 }
 
 ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }

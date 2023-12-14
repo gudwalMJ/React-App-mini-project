@@ -12,19 +12,25 @@ import AboutPage from './assets/pages/AboutPage';
 function App() {
     return (
         <Router>
-            <div className='app-container'>
-                <Navbar />
+            <Navbar />
+            <div className='application-wrapper'>
                 <Sidebar />
-                <div className='main-container'>
-                    <Routes>
-                        <Route path='/' element={<DashboardPage />} />
-                        <Route path='/item/:id' element={<ItemDetailsPage />} />
-                        <Route path='/about' element={<AboutPage />} />
-                        <Route path='*' element={<NotFoundPage />} />
-                        {/* Add more routes as needed */}
-                    </Routes>
+                <div className='app-container'>
+                    <div className='main-container'>
+                        <div className='routes-container'>
+                            <Routes>
+                                <Route path='/' element={<DashboardPage />} />
+                                <Route
+                                    path='/item/:id'
+                                    element={<ItemDetailsPage />}
+                                />
+                                <Route path='/about' element={<AboutPage />} />
+                                <Route path='*' element={<NotFoundPage />} />
+                                {/* Add more routes as needed */}
+                            </Routes>
+                        </div>
+                    </div>
                 </div>
-
                 <Footer />
             </div>
         </Router>
