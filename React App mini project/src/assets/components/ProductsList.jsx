@@ -1,6 +1,7 @@
 // ProductsList.jsx
 import React, { useState } from "react";
-import List from "./List"; // Import the new List component
+import { Link } from "react-router-dom";
+import List from "./List";
 import productsData from "../../../products.json";
 import "/src/style/productsList.css";
 
@@ -18,6 +19,13 @@ function ProductsList() {
     <div>
       <h2>Product List</h2>
       <List products={products} handleDelete={handleDelete} />
+      <ul>
+        {products.map((product) => (
+          <li key={product.id}>
+            <Link to={`/item/${product.id}`}>{product.title}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
