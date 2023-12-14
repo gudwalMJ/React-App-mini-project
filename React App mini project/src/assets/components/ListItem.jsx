@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types'; // ES6
+import PropTypes from 'prop-types';
 
 function ListItem({ product, defaultStockAmount, handleDelete }) {
     const productId = product?.id;

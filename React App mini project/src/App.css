@@ -72,3 +72,7 @@ h1 {
     justify-content: center;
     flex-direction: column;
 }
+
+.welcome-text {
+    color: #00e2ff;
+}
