@@ -9,6 +9,7 @@ function ListItem({ product, defaultStockAmount, handleDelete }) {
         </span>
       )}
       <img src={product.thumbnail} alt={product.title} />
+
       <div className="textPart">
         <h3>{product.title}</h3>
         <p>{product.description}</p>
@@ -16,6 +17,10 @@ function ListItem({ product, defaultStockAmount, handleDelete }) {
         <p>
           <span className="bold-text">Price:</span> ${product.price}
         </p>
+        <p>Discount: {product.discountPercentage}%</p>
+        <p>Rating: {product.rating}</p>
+        <p>Brand: {product.brand}</p>
+        <p>Category: {product.category}</p>
         {/* */}
         <div className="Delete-button">
           <button onClick={() => handleDelete(product.id)}>Delete</button>
