@@ -1,13 +1,42 @@
 body {
-  margin: 0;
-  background-color: white;
-  padding-top: 20px;
+    margin: 0;
+    background-color: white;
+    padding-top: 20px;
+    display: flex;
 }
 .low-stock {
-  color: red;
-  font-weight: bold;
+    color: red;
+    font-weight: bold;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: black;
+    justify-content: center;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 100px;
+    margin-left: 200px;
+}
+
+.main-content h2 {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    color: black;
 }
 
 h1 {
-  color: black;
+    color: black;
 }
