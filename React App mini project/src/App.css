@@ -1,6 +1,8 @@
 body {
     margin: 0;
     background-color: white;
+    overflow-x: hidden;
+   
 }
 
 .application-wrapper {
@@ -9,7 +11,7 @@ body {
     align-items: flex-start;
 }
 
-.low-stock {
+.low-stock {http://localhost:5173/src/assets/images/ironhacklogo.png
     color: red;
     font-weight: bold;
 }
@@ -75,4 +77,9 @@ h1 {
 
 .welcome-text {
     color: #00e2ff;
+}
+
+.team-members img {
+    width: 200px;
+    height: 150px;
 }

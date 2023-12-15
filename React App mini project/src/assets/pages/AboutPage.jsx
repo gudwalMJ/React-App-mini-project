@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-//import Carina from '../images/CarinaFrança.jpeg';
-//import Josip from '../images/Josip.png';
+import Carina from '../images/CarinaFrança.jpeg';
+import Josip from '../images/Josip.png';
 
 const AboutPage = () => {
     return (
@@ -10,11 +10,11 @@ const AboutPage = () => {
             <h3>Information about the team members:</h3>
             <ul className='team-members'>
                 <li>
-                    {/* {<img
+                    <img
                         src={Carina}
-                        alt='Photo Carina'
-                        className='Photo-Carina'
-                    />} */}
+                        alt='photo-carina'
+                        className='photo-carina'
+                    />
                     <br />
                     <p>
                         <strong>Carina França</strong> I&apos;m Brazilian living
@@ -33,11 +33,11 @@ const AboutPage = () => {
                 </li>
                 <li>
                     {' '}
-                    {/* {<img
+                    <img
                         src={Josip}
                         alt='Photo Josip'
                         className='Photo-Josip'
-                    />} */}
+                    />
                     <strong>Josip Lastname</strong> <p>{/* some text */}</p> You
                     can check my GitHub profile
                     <Link to='https://github.com/gudwalMJ'>here </Link>and my
