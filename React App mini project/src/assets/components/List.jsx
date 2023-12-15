@@ -1,10 +1,9 @@
 // List.jsx
 import ListItem from './ListItem';
 import PropTypes from 'prop-types';
-
 function List({ products, handleDelete }) {
+    console.log('Rendering List with products:', products);
     const defaultStockAmount = 60;
-
     return (
         <div className='productsList-wrapper'>
             <ul>
@@ -20,10 +19,8 @@ function List({ products, handleDelete }) {
         </div>
     );
 }
-
 List.propTypes = {
     products: PropTypes.array,
     handleDelete: PropTypes.func,
 };
-
 export default List;

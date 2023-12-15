@@ -1,32 +1,25 @@
-// AddItemForm.jsx
-import { useState } from 'react';
-
-const AddItemForm = ({ onAddItem }) => {
-    const [newItem, setNewItem] = useState({
+import React, { useState } from 'react';
+const ProductForm = ({ onAdd }) => {
+    const [formData, setFormData] = useState({
         title: '',
         description: '',
-        // Add other fields as needed
+        price: '',
     });
-
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setNewItem((prevItem) => ({
-            ...prevItem,
-            [name]: value,
-        }));
+        setFormData((prevData) => ({ ...prevData, [name]: value }));
     };
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Add validation logic if needed
-        onAddItem(newItem);
-        setNewItem({
+        // You can add validation here before adding the item
+        onAdd(formData);
+        // Reset the form after submission
+        setFormData({
             title: '',
             description: '',
-            // Reset other fields
+            price: '',
         });
     };
-
     return (
         <form onSubmit={handleSubmit}>
             <label>
@@ -34,7 +27,7 @@ const AddItemForm = ({ onAddItem }) => {
                 <input
                     type='text'
                     name='title'
-                    value={newItem.title}
+                    value={formData.title}
                     onChange={handleChange}
                     required
                 />
@@ -43,15 +36,23 @@ const AddItemForm = ({ onAddItem }) => {
                 Description:
                 <textarea
                     name='description'
-                    value={newItem.description}
+                    value={formData.description}
                     onChange={handleChange}
                     required
                 />
             </label>
-            {/* Add other form fields as needed */}
+            <label>
+                Price:
+                <input
+                    type='number'
+                    name='price'
+                    value={formData.price}
+                    onChange={handleChange}
+                    required
+                />
+            </label>
             <button type='submit'>Add Item</button>
         </form>
     );
 };
-
-export default AddItemForm;
+export default ProductForm;

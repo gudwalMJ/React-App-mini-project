@@ -3,8 +3,8 @@
     left: 0;
     top: 9em;
     height: 100%; /* Adjust the height as needed */
-    width: 9em; /* Adjust the width as needed */
-    background-color: #344bf1;
+    width: 5em; /* Adjust the width as needed */
+    background-color: #344af16f;
     color: white;
     padding-top: 130px; /* Adjust where the Home Page starts */
     padding-bottom: 60px;
@@ -16,10 +16,11 @@ nav {
     padding: 20px;
 }
 
-ul {
+.sideBar ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    position: absolute;
 }
 
 li {
