@@ -60,3 +60,39 @@
     display: inline-flex;
     align-items: center;
 }
+
+.product-form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-wrapper {
+    align-content: flex-end;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 2em;
+    padding: 0 2em;
+    font-weight: bold;
+    justify-items: center;
+}
+
+.form-wrapper input {
+    border: 1px solid black;
+}
+
+.input-field {
+    color: black;
+    background-color: aliceblue;
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.add-item-button {
+    height: 2.8em;
+    width: 9em;
+    font-size: 0.8em;
+    margin-top: auto;
+}

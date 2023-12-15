@@ -14,20 +14,34 @@ function App() {
         <Router>
             <Navbar />
             <div className='application-wrapper'>
-                <Sidebar />
-                <div className='app-container'>
-                    <div className='main-container'>
-                        <div className='routes-container'>
-                            <Routes>
-                                <Route path='/' element={<DashboardPage />} />
-                                <Route
-                                    path='/item/:id'
-                                    element={<ItemDetailsPage />}
-                                />
-                                <Route path='/about' element={<AboutPage />} />
-                                <Route path='*' element={<NotFoundPage />} />
-                                {/* Add more routes as needed */}
-                            </Routes>
+                <div className='app-plus-sidebar-flex'>
+                    <div className='sidebar-width-placeholder'>
+                        <Sidebar />
+                    </div>
+
+                    <div className='app-container'>
+                        <div className='main-container'>
+                            <div className='routes-container'>
+                                <Routes>
+                                    <Route
+                                        path='/'
+                                        element={<DashboardPage />}
+                                    />
+                                    <Route
+                                        path='/item/:id'
+                                        element={<ItemDetailsPage />}
+                                    />
+                                    <Route
+                                        path='/about'
+                                        element={<AboutPage />}
+                                    />
+                                    <Route
+                                        path='*'
+                                        element={<NotFoundPage />}
+                                    />
+                                    {/* Add more routes as needed */}
+                                </Routes>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,15 +1,12 @@
 .sideBar {
     position: fixed;
     left: 0;
-    top: 9em;
-    height: 100%; /* Adjust the height as needed */
-    width: 5em; /* Adjust the width as needed */
-    background-color: #344af16f;
+    padding: 0;
+    width: 8em;
+    background-color: #344bf1;
     color: white;
-    padding-top: 130px; /* Adjust where the Home Page starts */
-    padding-bottom: 60px;
+    height: 100%;
     text-align: center;
-    order: 0;
 }
 
 nav {
@@ -17,17 +14,25 @@ nav {
 }
 
 .sideBar ul {
+    display: flex;
+    flex-direction: column;
     list-style: none;
-    padding: 0;
+    padding: 2em 0 0;
     margin: 0;
-    position: absolute;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1em;
 }
 
-li {
-    margin-bottom: 10px;
-}
-
-a {
+.sideBar a {
     color: white;
-    text-decoration: none;
+    text-shadow: black 0.5px 0.5px;
+}
+
+.sideBar a:hover {
+    color: #202bfa;
+}
+
+.sidebar-width-placeholder {
+    width: 9.2em;
 }
