@@ -1,13 +1,16 @@
-import '/src/style/navBar.css';
-import ironhacklogo from '../images/ironhacklogo.png';
+import { Link } from "react-router-dom";
+import "/src/style/navBar.css";
+import ironhacklogo from "../images/ironhacklogo.png";
 
 function Navbar() {
-    return (
-        <header className='navBar'>
-            <img src={ironhacklogo} alt='Ironhack Logo' />
-            <h1>Ironhack Market</h1>
-        </header>
-    );
+  return (
+    <header className="navBar">
+      <Link to="/">
+        <img src={ironhacklogo} alt="Ironhack Logo" />
+      </Link>
+      <h1>Ironhack Market</h1>
+    </header>
+  );
 }
 
 export default Navbar;
