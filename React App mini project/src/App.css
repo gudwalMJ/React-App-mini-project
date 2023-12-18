@@ -1,115 +1,124 @@
 body {
-    margin: 0;
-    background-color: white;
-    overflow-x: hidden;
-    list-style-type: none;
+  margin: 0;
+  background-color: white;
+  overflow-x: hidden;
+  list-style-type: none;
 }
 
 .application-wrapper {
-    display: flex;
-    box-sizing: border-box;
-    align-items: flex-start;
+  display: flex;
+  box-sizing: border-box;
+  align-items: flex-start;
 }
 
 .low-stock {
-    color: red;
-    font-weight: bold;
+  color: red;
+  font-weight: bold;
 }
 
 .app-container {
-    width: 100%;
-    display: flex;
-    color: black;
-    order: 1;
+  width: 100%;
+  display: flex;
+  color: black;
+  order: 1;
 }
 
 .app-plus-sidebar-flex {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 .main-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    margin-top: 100px;
-    margin-left: 200px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 100px;
+  margin-left: 200px;
 }
 
 .main-container {
-    width: 100%;
-    margin-bottom: 60px;
-    padding: 2em;
+  width: 100%;
+  margin-bottom: 60px;
+  padding: 2em;
 }
 
 .main-content h2 {
-    color: black;
-    font-weight: bold;
-    margin-bottom: 10px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .main-content p {
-    color: black;
+  color: black;
 }
 
 h1 {
-    color: black;
+  color: black;
 }
 
 .about-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-}
-
-.team-members li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.team-members p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.team-members img {
-    width: 150px;
-    height: 150px;
-}
-
-.welcome-text {
-    color: #00e2ff;
-}
-
-.team-members img {
-    width: 10em;
-    height: 12em;
-    object-fit: contain;
-}
-
-.photo-carina {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.photo-Josip {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 .team-members {
-    background-color: white;
-    height: 100vh;
-    height: auto;
-    margin-bottom: 5em;
+  list-style-type: none;
+  width: 100%; /* Ensure the ul takes full width */
+  padding: 0; /* Remove default padding */
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px; /* Space between team member entries */
+}
+
+.team-member-photo {
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  object-fit: contain;
+  margin-right: 20px; /* Space between the photo and the text */
+}
+
+.team-member-info {
+  flex: 1;
+}
+
+.welcome-text {
+  color: #74bef7;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.welcome-text:hover {
+  color: #579cfa; /* A lighter shade for hover */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.75);
+}
+
+.info {
+  font-weight: bold;
+}
+
+.team-members img {
+  width: 10em;
+  height: 12em;
+  object-fit: contain;
+}
+
+.photo-carina {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.photo-Josip {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
