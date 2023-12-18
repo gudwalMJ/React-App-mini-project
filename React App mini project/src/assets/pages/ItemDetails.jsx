@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
-import UpdateProductForm from '../components/UpdateProductForm'; // Import the update form component
+import UpdateProductForm from '../components/UpdateProductForm';
 
 function ItemDetailsPage({ products, updateProduct }) {
-    const { id } = useParams(); // Extracting 'id' from URL parameters
+    const { id } = useParams();
 
     const product = products.find(
         (product) => String(product.id) === String(id)
@@ -23,7 +23,7 @@ function ItemDetailsPage({ products, updateProduct }) {
                 <strong>Price:</strong> ${product.price}
             </p>
             <p>
-                <strong>Discount:</strong> {product.discountPercentage}%
+                <strong>Discount:</strong> {product.discount}%
             </p>
             <p>
                 <strong>Rating:</strong> {product.rating}

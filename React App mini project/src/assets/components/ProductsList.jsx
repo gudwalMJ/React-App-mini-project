@@ -1,8 +1,8 @@
 import List from './List';
 import '/src/style/productsList.css';
+import PropTypes from 'prop-types';
 
-function ProductsList({ products, onDelete, setProducts }) {
-    console.log('ProductsList rendering with products:', products);
+function ProductsList({ products, setProducts }) {
     const handleDelete = (productId) => {
         const updatedProducts = products.filter(
             (product) => product.id !== productId
@@ -16,4 +16,10 @@ function ProductsList({ products, onDelete, setProducts }) {
         </div>
     );
 }
+
+ProductsList.propTypes = {
+    products: PropTypes.array.isRequired,
+    setProducts: PropTypes.func.isRequired,
+};
+
 export default ProductsList;

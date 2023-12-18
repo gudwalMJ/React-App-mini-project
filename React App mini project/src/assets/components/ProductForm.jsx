@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const ProductForm = ({ onAdd }) => {
     const [formData, setFormData] = useState({
@@ -21,6 +22,7 @@ const ProductForm = ({ onAdd }) => {
             price: '',
         });
     };
+
     return (
         <div className='product-form-wrapper'>
             {' '}
@@ -39,6 +41,7 @@ const ProductForm = ({ onAdd }) => {
                 <label>
                     Description:
                     <input
+                        type='text'
                         name='description'
                         value={formData.description}
                         onChange={handleChange}
@@ -64,4 +67,9 @@ const ProductForm = ({ onAdd }) => {
         </div>
     );
 };
+
+ProductForm.propTypes = {
+    onAdd: PropTypes.func.isRequired,
+};
+
 export default ProductForm;
