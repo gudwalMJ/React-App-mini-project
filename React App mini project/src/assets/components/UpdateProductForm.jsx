@@ -6,7 +6,10 @@ const UpdateProductForm = ({ product, onUpdate }) => {
         title: '',
         description: '',
         price: '',
-        // Add other fields as necessary
+        stock: '',
+        discount: '',
+        rating: '',
+        brand: '',
     });
 
     // Load product data into the form when the component mounts or when the product changes
@@ -16,6 +19,10 @@ const UpdateProductForm = ({ product, onUpdate }) => {
                 title: product.title,
                 description: product.description,
                 price: product.price,
+                stock: product.stock,
+                discount: product.discount,
+                rating: product.rating,
+                brand: product.brand,
                 // Load other fields as necessary
             });
         }
@@ -28,14 +35,16 @@ const UpdateProductForm = ({ product, onUpdate }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form submitted with data:', formData);
+
         onUpdate(product.id, formData);
-        console.log('Form submitted with data:', formData);
     };
 
     return (
-        <div className='update-product-form-wrapper'>
-            <form onSubmit={handleSubmit}>
+        <div>
+            <form
+                onSubmit={handleSubmit}
+                className='update-product-form-wrapper'
+            >
                 <label>
                     Title:
                     <input
@@ -44,7 +53,7 @@ const UpdateProductForm = ({ product, onUpdate }) => {
                         value={formData.title}
                         onChange={handleChange}
                         required
-                        className='input-field-'
+                        className='input-field-update'
                     />
                 </label>
                 <label>
@@ -54,7 +63,7 @@ const UpdateProductForm = ({ product, onUpdate }) => {
                         value={formData.description}
                         onChange={handleChange}
                         required
-                        className='input-field'
+                        className='input-field-update'
                     />
                 </label>
                 <label>
@@ -65,11 +74,57 @@ const UpdateProductForm = ({ product, onUpdate }) => {
                         value={formData.price}
                         onChange={handleChange}
                         required
-                        className='input-field'
+                        className='input-field-update'
+                    />
+                </label>
+                <label>
+                    Stock:
+                    <input
+                        type='number'
+                        name='stock'
+                        value={formData.stock}
+                        onChange={handleChange}
+                        required
+                        className='input-field-update'
+                    />
+                </label>
+                <label>
+                    Discount:
+                    <input
+                        type='number'
+                        name='discount'
+                        value={formData.discount}
+                        onChange={handleChange}
+                        required
+                        className='input-field-update'
+                    />
+                </label>
+                <label>
+                    Rating:
+                    <input
+                        type='number'
+                        name='rating'
+                        value={formData.rating}
+                        onChange={handleChange}
+                        required
+                        className='input-field-update'
+                    />
+                </label>
+                <label>
+                    Brand:
+                    <input
+                        type='string'
+                        name='brand'
+                        value={formData.brand}
+                        onChange={handleChange}
+                        required
+                        className='input-field-update'
                     />
                 </label>
                 {/* Add other fields as necessary */}
-                <button type='submit'>Update Item</button>
+                <button className='update-item-button' type='submit'>
+                    Update Item
+                </button>
             </form>
         </div>
     );

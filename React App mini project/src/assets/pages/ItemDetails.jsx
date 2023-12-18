@@ -3,30 +3,39 @@ import { useParams } from 'react-router-dom';
 import UpdateProductForm from '../components/UpdateProductForm'; // Import the update form component
 
 function ItemDetailsPage({ products, updateProduct }) {
-    console.log('ItemDetailsPage products:', products);
     const { id } = useParams(); // Extracting 'id' from URL parameters
-    console.log('Product ID from URL:', id);
 
     const product = products.find(
         (product) => String(product.id) === String(id)
     );
 
-    // const handleUpdateProduct = (updatedData) => {
-    //     updateProduct(id, updatedData); // Use 'id' here, not 'productId'
-    // };
-
     return product ? (
-        <div>
-            <h2>{product.title}</h2>
-            <p>{product.description}</p>
-            <p>Stock: {product.stock}</p>
-            <p>Price: ${product.price}</p>
-            <p>Discount: {product.discountPercentage}%</p>
-            <p>Rating: {product.rating}</p>
-            <p>Brand: {product.brand}</p>
-            <p>Category: {product.category}</p>
+        <div className='item-details-page-wrapper'>
+            <h1>{product.title}</h1>
+            <p>
+                {' '}
+                <strong>Description:</strong> {product.description}
+            </p>
+            <p>
+                <strong>Stock:</strong> {product.stock}
+            </p>
+            <p>
+                <strong>Price:</strong> ${product.price}
+            </p>
+            <p>
+                <strong>Discount:</strong> {product.discountPercentage}%
+            </p>
+            <p>
+                <strong>Rating:</strong> {product.rating}
+            </p>
+            <p>
+                <strong>Brand:</strong> {product.brand}
+            </p>
+            <p>
+                <strong>Category:</strong> {product.category}
+            </p>
             {product.images && (
-                <div>
+                <div className='item-details-page'>
                     <ul>
                         {product.images.map((image, index) => (
                             <li key={index}>
