@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const ProductForm = ({ onAdd }) => {
     const [formData, setFormData] = useState({
@@ -12,9 +12,9 @@ const ProductForm = ({ onAdd }) => {
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        // You can add validation here before adding the item
+
         onAdd(formData);
-        // Reset the form after submission
+
         setFormData({
             title: '',
             description: '',

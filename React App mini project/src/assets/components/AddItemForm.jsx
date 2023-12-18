@@ -5,7 +5,6 @@ const AddItemForm = ({ onAddItem }) => {
     const [newItem, setNewItem] = useState({
         title: '',
         description: '',
-        // Add other fields as needed
     });
 
     const handleChange = (e) => {
@@ -37,6 +36,7 @@ const AddItemForm = ({ onAddItem }) => {
                     value={newItem.title}
                     onChange={handleChange}
                     required
+                    className=''
                 />
             </label>
             <label>
@@ -47,8 +47,9 @@ const AddItemForm = ({ onAddItem }) => {
                     onChange={handleChange}
                     required
                 />
+                ß
             </label>
-            {/* Add other form fields as needed */}
+
             <button type='submit'>Add Item</button>
         </form>
     );
