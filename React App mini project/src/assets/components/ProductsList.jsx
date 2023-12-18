@@ -1,6 +1,4 @@
-import { useState } from "react";
 import List from "./List";
-import productsData from "../../../products.json";
 import "/src/style/productsList.css";
 
 function ProductsList({ products, onDelete, setProducts }) {

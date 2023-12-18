@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #16005e;
+  background-color: #74bef7;
   color: white;
   padding: 10px;
   text-align: center;
@@ -14,6 +14,42 @@
 }
 
 .footer a {
+  font-size: 1em;
+  font-weight: bold;
   color: white;
-  text-decoration: none;
+  text-shadow: black 0.5px 0.5px;
+  transition: color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background-color: white; /* Color of the underline */
+  transform: scaleX(0); /* Start with no visible underline */
+  transition: transform 0.3s ease; /* Animate the transformation */
+  transform-origin: bottom left; /* Start the transformation from the left */
+}
+
+.footer a:hover {
+  text-shadow: black 0.5px 0.5px; /* Optional: Enhance the text-shadow on hover if desired */
+}
+
+.footer a:hover::after {
+  transform: scaleX(1); /* Extend the underline across the link on hover */
+}
+
+/* the sliding effect */
+@keyframes underlineSlide {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
 }
