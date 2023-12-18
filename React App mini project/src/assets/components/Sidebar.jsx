@@ -9,6 +9,9 @@ function Sidebar() {
                 <li>
                     <Link to='/about'>About</Link>
                 </li>
+                <li>
+                    <Link to='/'> Home Page </Link>
+                </li>
             </ul>
         </nav>
     );

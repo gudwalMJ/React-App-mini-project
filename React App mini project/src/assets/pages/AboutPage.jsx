@@ -5,6 +5,11 @@ const AboutPage = () => {
     return (
         <div className='about-page'>
             <h1 className='welcome-text'>Welcome to IronHack Marketplace</h1>
+            <p>
+                Welcome to the Ironhack Marketplace, an application developed by
+                Ironhack students, prepared to meet the needs of the most
+                demanding customers.{' '}
+            </p>
             <h3 className='info'>Information about the team members:</h3>
             <ul className='team-members'>
                 <li className='team-member'>

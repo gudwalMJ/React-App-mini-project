@@ -11,11 +11,6 @@ body {
     align-items: flex-start;
 }
 
-.low-stock {
-    color: red;
-    font-weight: bold;
-}
-
 .app-container {
     width: 100%;
     display: flex;
@@ -90,7 +85,7 @@ h1 {
 }
 
 .welcome-text {
-    color: #74bef7;
+    color: #0062ac;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }

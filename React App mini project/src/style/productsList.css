@@ -13,13 +13,15 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 1em;
-    border: 1px solid gray;
+    border: 1px solid #74bef7;
     margin-bottom: 4em;
     color: black;
 }
 
 .low-stock {
-    font-size: 0.8em;
+    color: rgb(240, 29, 57);
+    font-weight: bold;
+    font-size: 0.9em;
 }
 
 .product-list-wrapper ul {
@@ -47,13 +49,19 @@
     font-weight: bold;
 }
 
-.product-list-wrapper h2 {
+.product-list-wrapper h1 {
     text-align: center;
+    text-transform: uppercase;
+    color: #0062ac;
 }
 
 .delete-button {
     display: flex;
     justify-content: space-between;
+}
+
+.delete-button button {
+    background-color: #74bef7;
 }
 
 .low-stock {
@@ -86,7 +94,7 @@
 }
 
 .form-wrapper input {
-    border: 1px solid black;
+    border: 1px solid #74bef7;
 }
 
 .input-field {
@@ -98,10 +106,14 @@
 }
 
 .add-item-button {
-    height: 2.8em;
     width: 9em;
     font-size: 0.8em;
     margin-top: auto;
+    background-color: #74bef7;
+}
+
+.item-details-page-wrapper h1 {
+    color: #0062ac;
 }
 
 .item-details-page-wrapper ul {
@@ -116,6 +128,7 @@
 .item-details-page-wrapper p {
     border: 1px solid #74bef7;
     width: 30%;
+    padding: 0.3em;
 }
 
 .item-details-page-wrapper li {
@@ -135,7 +148,8 @@
     background-color: aliceblue;
     width: 100%;
     padding: 8px;
-    box-sizing: border-box;
+
+    border: 1px solid #74bef7;
 }
 
 .update-item-button {

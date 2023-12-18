@@ -11,7 +11,7 @@ function ProductsList({ products, setProducts }) {
     };
     return (
         <div className='product-list-wrapper'>
-            <h2>Product List</h2>
+            <h1>Products List</h1>
             <List products={products} handleDelete={handleDelete} />
         </div>
     );
