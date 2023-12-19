@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
-=======
-import React from 'react';
-import './App.css';
->>>>>>> 59f3ad6 (add a list of products)
 import Navbar from './assets/components/Navbar';
 import Footer from './assets/components/Footer';
 import Sidebar from './assets/components/Sidebar';
