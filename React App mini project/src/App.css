@@ -167,3 +167,19 @@ h1 {
   margin-right: auto;
   padding: 0 15px;
 }
+.not-found-page .rick {
+  background-color: #0062ac; /* Button color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding inside the button */
+  margin-top: 20px; /* Margin above the button */
+  cursor: pointer; /* Mouse pointer on hover */
+  text-transform: uppercase; /* Uppercase text */
+  font-weight: bold; /* Bold text */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Transition for the background color */
+}
+
+.not-found-page .rick:hover {
+  background-color: #004b8d; /* Darker background color on hover */
+}
