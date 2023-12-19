@@ -12,7 +12,7 @@ function DashboardPage({ products, setProducts }) {
         setProducts(updatedProducts);
     };
     const addProduct = (newProduct) => {
-        // Generate a unique ID for the new product using uuid
+        // Generate a unique ID for the new product
         const newId = uuidv4();
         const productWithId = { ...newProduct, id: newId };
 
