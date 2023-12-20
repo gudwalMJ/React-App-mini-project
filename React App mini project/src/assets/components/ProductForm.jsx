@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 
 const ProductForm = ({ onAdd }) => {
     const [formData, setFormData] = useState({
@@ -7,25 +8,52 @@ const ProductForm = ({ onAdd }) => {
         description: '',
         price: '',
     });
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prevData) => ({ ...prevData, [name]: value }));
     };
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        onAdd(formData);
+        try {
+            // Fetch image related to title using Unsplash API
+            const unsplashResponse = await axios.get(
+                'https://api.unsplash.com/photos/random',
+                {
+                    params: {
+                        query: formData.title,
+                        orientation: 'landscape',
+                        client_id:
+                            '9qNHi7_HLW6Qw3N4ko1WvrE0DMOd68hmU-K02BFjMtg',
+                    },
+                }
+            );
 
-        setFormData({
-            title: '',
-            description: '',
-            price: '',
-        });
+            const imageUrl = unsplashResponse.data.links.download;
+
+            // Adds the image URL to the data object before calling the onAdd function
+            const newData = {
+                ...formData,
+                thumbnail: imageUrl,
+                images: [imageUrl],
+            };
+
+            onAdd(newData);
+
+            setFormData({
+                title: '',
+                description: '',
+                price: '',
+            });
+        } catch (error) {
+            console.error('Erro ao buscar imagem:', error);
+        }
     };
 
     return (
         <div className='product-form-wrapper'>
-            {' '}
             <form onSubmit={handleSubmit} className='form-wrapper'>
                 <label>
                     Title:

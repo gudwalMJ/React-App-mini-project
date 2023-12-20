@@ -12,17 +12,16 @@ const UpdateProductForm = ({ product, onUpdate }) => {
         brand: '',
     });
 
-    // Load product data into the form when the component mounts or when the product changes
     useEffect(() => {
         if (product) {
             setFormData({
-                title: product.title,
-                description: product.description,
-                price: product.price,
-                stock: product.stock,
-                discount: product.discountPercentage,
-                rating: product.rating,
-                brand: product.brand,
+                title: product.title || '',
+                description: product.description || '',
+                price: product.price || '',
+                stock: product.stock || '',
+                discount: product.discountPercentage || '',
+                rating: product.rating || '',
+                brand: product.brand || '',
             });
         }
     }, [product]);
@@ -34,7 +33,6 @@ const UpdateProductForm = ({ product, onUpdate }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
         onUpdate(product.id, formData);
     };
 
@@ -58,6 +56,7 @@ const UpdateProductForm = ({ product, onUpdate }) => {
                 <label>
                     Description:
                     <input
+                        type='text'
                         name='description'
                         value={formData.description}
                         onChange={handleChange}
