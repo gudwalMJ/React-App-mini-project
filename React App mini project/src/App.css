@@ -58,8 +58,8 @@ h1 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: 100vh; /* This ensures the div takes at least the height of the viewport */
-    width: 100%; /* This sets the width to take the full width of its container */
+    min-height: 100vh;
+    width: 100%;
 }
 
 .team-members {
@@ -129,14 +129,14 @@ h1 {
 }
 
 .not-found-page {
-    background-color: white; /* This sets the background color to white */
-    min-height: 100vh; /* This ensures the div takes at least the height of the viewport */
-    width: 100%; /* This sets the width to take the full width of its container */
+    background-color: white;
+    min-height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; /* This centers the text horizontally */
+    text-align: center;
 }
 .not-found-page h2 {
     color: #0062ac;

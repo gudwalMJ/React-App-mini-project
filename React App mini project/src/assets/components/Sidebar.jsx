@@ -1,4 +1,3 @@
-// Sidebar.jsx
 import '/src/style/sideBar.css';
 import { Link } from 'react-router-dom';
 

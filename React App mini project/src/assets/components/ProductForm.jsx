@@ -48,7 +48,7 @@ const ProductForm = ({ onAdd }) => {
                 price: '',
             });
         } catch (error) {
-            console.error('Erro ao buscar imagem:', error);
+            console.error('error when searching image:', error);
         }
     };
 
