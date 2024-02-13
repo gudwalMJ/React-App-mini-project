@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "/src/style/navBar.css";
+import "../style/navBar.css";
 import ironhacklogo from "../images/ironhacklogo.png";
 
 function Navbar() {

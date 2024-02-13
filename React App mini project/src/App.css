@@ -49,10 +49,6 @@ body {
   color: black;
 }
 
-h1 {
-  color: black;
-}
-
 .about-page {
   display: flex;
   align-items: center;

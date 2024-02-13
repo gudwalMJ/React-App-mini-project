@@ -1,0 +1,154 @@
+.item-details-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 20px;
+  padding: 20px;
+  position: relative;
+}
+.product-title {
+  color: #333;
+  margin: 0;
+  padding: 20px 0;
+}
+/* Slideshow styles */
+.product-images-slideshow {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  overflow: hidden;
+}
+.product-images-slideshow .each-slide div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 270px; /* Adjust based on your preference */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.product-description .product-label {
+  display: block; /* Makes 'Description:' start on a new line */
+  color: #000; /* Optional: makes the label 'Description:' stand out */
+  margin-bottom: 5px; /* Adds some space between the label and the description text */
+}
+.product-description {
+  color: #666;
+  margin: 10px 0;
+  gap: 10px; /* Spacing between brand and rating */
+  background: #f8f8f8; /* Light grey background for the price section */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding inside the price box */
+  margin: 10px 0; /* Adds margin above and below the category */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.product-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Spacing between brand and rating */
+  background: #f8f8f8; /* Light grey background for the price section */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding inside the price box */
+  margin: 10px 0; /* Adds margin above and below the category */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.product-brand,
+.product-rating {
+  margin: 0 10px; /* Adjust as needed */
+}
+.rating-number {
+  margin-left: 5px; /* Spacing between stars and rating number */
+  font-size: 1em;
+}
+.filled-star,
+.half-star,
+.empty-star {
+  color: #ffd700; /* Gold color for filled star */
+  position: relative;
+  display: inline-block;
+}
+.empty-star {
+  color: #ccc;
+}
+.half-star {
+  color: #ffd700; /* Gold color for filled star */
+  direction: rtl;
+}
+.half-star::after {
+  content: "★";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%; /* Half the width of the star */
+  overflow: hidden;
+  color: #ccc; /* Color for the empty part of the star */
+  z-index: 1;
+}
+.star-rating {
+  white-space: nowrap;
+  font-size: 1.5em; /* Adjust size as needed */
+  line-height: 1;
+}
+.product-price {
+  background: #f8f8f8; /* Light grey background for the price section */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding inside the price box */
+  margin: 20px 0; /* Margin above and below the price box */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.product-price .price-value {
+  color: #28a745; /* A standout color for the price value */
+  font-weight: bold; /* Bold for emphasis */
+  font-size: 1.3em; /* Larger font size for the price value */
+}
+.product-price .discount-value {
+  color: #ff6347; /* A different standout color for the discount value */
+  font-weight: bold;
+}
+.product-price .stock-value {
+  font-weight: bold;
+}
+.product-price .stock-value {
+  color: #28a745; /* Green color indicating 'In stock' */
+}
+.product-price .stock-value.low-stock {
+  color: #ffa500; /* Orange color indicating 'Low on stock' */
+}
+.product-price .stock-value.out-of-stock {
+  color: #dc3545; /* Red color indicating 'Out of stock' */
+}
+.product-price p {
+  margin: 10px 0;
+  color: #333; /* Darker text for better readability */
+  font-size: 1.1em;
+}
+.product-price strong {
+  color: #000;
+  font-weight: bold;
+}
+.product-category {
+  background: #f8f8f8; /* A subtle background color that distinguishes the category */
+  border-radius: 5px; /* Rounded corners for a polished look */
+  padding: 10px 15px; /* Some padding to give space inside the borders */
+  display: inline-block; /* Makes the background wrap tightly around the text */
+  margin: 10px 0; /* Adds margin above and below the category */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.product-category strong {
+  color: #333;
+  font-weight: bold;
+}
