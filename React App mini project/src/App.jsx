@@ -1,18 +1,16 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-// Components
+// Components //
 import Navbar from "./assets/components/Navbar";
 import Footer from "./assets/components/Footer";
-import Sidebar from "./assets/components/Sidebar";
-
-// Pages
+// Pages //
 import DashboardPage from "./assets/pages/Dashboard";
 import NotFoundPage from "./assets/pages/NotFound";
 import ItemDetailsPage from "./assets/pages/ItemDetails";
 import AboutPage from "./assets/pages/AboutPage";
-
+// Data //
 import productsData from "../products.json";
+// Styling //
 import "./App.css";
 
 function App() {
@@ -31,9 +29,6 @@ function App() {
       <Navbar />
       <div className="application-wrapper">
         <div className="app-plus-sidebar-flex">
-          <div className="sidebar-width-placeholder">
-            <Sidebar />
-          </div>
           <div className="app-container">
             <div className="main-container">
               <div className="routes-container">
